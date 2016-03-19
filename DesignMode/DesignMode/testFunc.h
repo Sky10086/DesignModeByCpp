@@ -1,12 +1,16 @@
 #include"simpleFactory.h"
 #include "strategy.h"
 #include "decorator.h"
+#include "proxy.h"
+#include "factoryMethod.h"
 using namespace std;
 enum ModeType
 {
 	simpleFactory,
 	strategy,
-	decorator
+	decorator,
+	proxyFlag,
+	factoryMethod
 };
 void testSimpleFactory()
 {
@@ -38,6 +42,22 @@ void testDecorator()
 	qiuxie->show();
 }
 
+void testProxy()
+{
+	proxy *pProxy = new proxy("Han mei mei");
+
+	pProxy->giveDolls();
+	pProxy->giveFlowers();
+	pProxy->giveChocolate();
+	return;
+}
+void testFactoryMethod()
+{
+	iFactory *factory = new volunteerFactory;
+	LeiFeng *volunteer1 = factory->createLeiFeng();
+	volunteer1->sweep();
+	volunteer1->wash();
+}
 void testMode(int ModeType)
 {
 	switch (ModeType)
@@ -50,6 +70,12 @@ void testMode(int ModeType)
 		break;
 	case decorator :
 		testDecorator();
+		break;
+	case proxyFlag:
+		testProxy();
+		break;
+	case factoryMethod:
+		testFactoryMethod();
 		break;
 	default:
 		break;

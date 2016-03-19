@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	
-	testMode(decorator);
+	testMode(factoryMethod);
 	system("pause");
 	return 0;
 }

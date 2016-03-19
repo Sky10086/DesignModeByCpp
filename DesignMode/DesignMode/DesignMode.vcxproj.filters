@@ -27,6 +27,12 @@
     <ClInclude Include="decorator.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="proxy.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="factoryMethod.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
